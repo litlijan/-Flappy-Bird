@@ -1,0 +1,67 @@
+/* Reset basic styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the game container and give it a styled border */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+}
+
+/* Game container styling */
+#game {
+    width: 400px;
+    height: 500px;
+    border: 3px solid #00796b;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to bottom, #80deea, #004d40);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Block and hole styling */
+#block, #hole {
+    width: 50px;
+    position: absolute;
+    left: 400px;
+    animation: moveBlock 3s infinite linear; /* Slowed down from 2s to 3s */
+}
+
+/* Block styling */
+#block {
+    height: 500px;
+    background-color: #2e7d32;
+}
+
+/* Hole styling */
+#hole {
+    height: 150px;
+    background-color: #e57373;
+    top: 200px; /* Initial top position */
+}
+
+/* Character (player) styling */
+#character {
+    width: 30px;
+    height: 30px;
+    background-color: #ffd54f;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Block and hole animation */
+@keyframes moveBlock {
+    0% { left: 400px; }
+    100% { left: -50px; }
+}
